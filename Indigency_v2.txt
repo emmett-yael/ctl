@@ -1,0 +1,175 @@
+Title: Massachusetts Indigency Calculator
+Author: David Colarusso
+Before: <link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>
+<h2 style="text-align:center;">Massachusetts Indigency Calculator</h2>
+<p><b>This is a <a href="https://www.codingthelaw.org/level/2/#mission_p2">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<p>Answer the following questions to see if you qualify for an appointment of counsel or fee waiver.</p>
+After:
+<script>
+function fedpov(house,income,percentage){
+	// Determines if your income is less than or equal to
+	// a percentage of the 2021 federal poverty guidelines
+	// for the contiguous United States. See
+	// https://aspe.hhs.gov/poverty-guidelines
+
+		var line = NaN;
+
+		if (house == 1) {
+			line = 12880;
+		} else if (house == 2) {
+			line = 17420;
+		} else if (house == 3) {
+			line = 21960;
+		} else if (house == 4) {
+			line = 26500;
+		} else if (house == 5) {
+			line = 31040;
+		} else if (house == 6) {
+			line = 35580;
+		} else if (house == 7) {
+			line = 40120;
+		} else if (house == 8) {
+			line = 44660;
+		} else if (house > 8) {
+			line = 44660 + (house-8)*4540;
+		}
+
+		if (income <= (line*(percentage/100))) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+</script>
+
+
+Q(house): How many people are in your household?
+X:number
+	Q(income): How much income does your household bring in per year in after tax dollars?
+	X:number
+		Q(1.1.1): Do you think you can repay part or all of the court fees?
+		A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('qualify2') } else if (fedpov(getvar('house'),getvar('income'),218)) { goto('maybe') } else { goto('disqualified') } ]: Can repay part or all
+		A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('qualify') } else if (fedpov(getvar('house'),getvar('income'),218)) { goto('maybe') } else { goto('disqualified') } ]: Cannot repay part or all
+
+Q(qualify): You qualify! Hooray!!!
+Q(qualify2): You qualify but you might need to repay some or all of the court fees 
+Q(maybe): You may be eligible
+
+Q(disqualified): Disqualified  
+
+
+
+
+
+
+Q(6): How many people are in your household or are tax dependents?
+
+Q(7): Is your income more, less, or the same as $16,100 USD/year?
+A: More
+	Q(7.1):GOTO:10
+A: Less
+	Q(7.2):GOTO:13
+A: The same
+	Q(7.3):GOTO:14
+Q(8): Is your income more, less, or the same as $21,775 USD/year?
+A: More
+	Q(8.1):GOTO:15
+A: Less
+	Q(8.2): You qualify for a public defender
+A: The same
+	Q(8.3): You may qualify for a public defender. If you have SSI or unemployment, these benefits factor in. SNAP does not.
+Q(9): Is your income more, less, or the same as $27,450 USD/year?
+A: More
+	Q(4.10):GOTO:17
+A: Less
+	Q(9.2): You qualify for a public defender
+A: The same
+	Q(9.3): You may qualify for a public defender. If you have SSI or unemployment, these benefits factor in. SNAP does not.
+Q(10): Is your income more, less, or the same as $33,125 USD/year?
+A: More
+	Q(10.1):GOTO:18
+A: Less
+	Q(10.2): You are not eligible to receive free legal aid.
+A: The same
+	Q(10.3): You may qualify for a public defender. If you have SSI or unemployment, these benefits factor in. SNAP does not. 
+Q(11): Is your income more, less, or the same as $38,800 USD/year?
+A: More
+	Q(11.1):GOTO:19
+A: Less
+	Q(11.2): You are not eligible to receive free legal aid.
+A: The same
+	Q(11.3): You may qualify for a public defender. If you have SSI or unemployment, these benefits factor in. SNAP does not. 
+Q(12): Is your income more, less, or the same as $44,475 USD/year?
+A: More
+	Q(12.1):GOTO:20
+A: Less
+	Q(12.2): You are not eligible to receive free legal aid.
+A: The same
+	Q(12.3): You may qualify for a public defender. If you have SSI or unemployment, these benefits factor in. SNAP does not. 
+Q(13): Is your income more, less, or the same as $50,150 USD/year?
+A: More
+	Q(13.1):GOTO:21
+A: Less
+	Q(13.2): You are not eligible to receive free legal aid.
+A: The same
+	Q(13.3): You may qualify for a public defender. If you have SSI or unemployment, these benefits factor in. SNAP does not. 
+Q(14): Is your income more, less, or the same as $55,825 USD/year?
+A: More
+	Q(14.1):GOTO:16
+A: Less
+	Q(14.2): You are not eligible to receive free legal aid.
+A: The same
+	Q(14.3): You may qualify for a public defender. If you have SSI or unemployment, these benefits factor in. SNAP does not. 
+Q(15): Do you earn more than $28,078.40 USD/year?
+A: Yes
+	Q(15.1):GOTO:11
+A: No
+	Q(15.2):GOTO:12
+Q(16): You are not eligible to receive free legal aid.
+Q(17): You may qualify for a public defender. If you have SSI or unemployment, these benefits factor in. SNAP does not.
+Q(18): You qualify for a public defender
+Q(19): You may qualify for a public defender. If you have SSI or unemployment, these benefits factor in. SNAP does not.
+Q(20): Do you earn more than $37,975.60 USD/year?
+A: Yes
+	Q(20.1): You are not eligible to receive free legal aid.
+A: No
+	Q(20.2): You may qualify for a public defender. If you have SSI or unemployment, these benefits factor in. SNAP does not.
+
+Q(21): Do you earn more than $97,358.80 USD/year?
+A: Yes
+	Q(21.1): You are not eligible to receive free legal aid.
+A: No
+	Q(21.2): You may qualify for a public defender. If you have SSI or unemployment, these benefits factor in. SNAP does not.
+Q(22): Do you earn more than $47,872.80 USD/year?
+A: Yes
+	Q(22.1): You are not eligible to receive free legal aid.
+A: No
+	Q(22.2): You may qualify for a public defender. If you have SSI or unemployment, these benefits factor in. SNAP does not.
+Q(23): Do you earn more than $57,770 USD/year?
+A: Yes
+	Q(23.1): You are not eligible to receive free legal aid.
+A: No
+	Q(23.2): You may qualify for a public defender. If you have SSI or unemployment, these benefits factor in. SNAP does not.
+Q(24): Do you earn more than $67,667.20 USD/year?
+A: Yes
+	Q(24.1): You are not eligible to receive free legal aid.
+A: No
+	Q(24.2): You may qualify for a public defender. If you have SSI or unemployment, these benefits factor in. SNAP does not.
+Q(25): Do you earn more than $77,564.40 USD/year?
+A: Yes
+	Q(25.1): You are not eligible to receive free legal aid.
+A: No
+	Q(25.2): You may qualify for a public defender. If you have SSI or unemployment, these benefits factor in. SNAP does not.
+
+Q(26): Do you earn more than $87,461.60 USD/year?
+A: Yes
+	Q(26.1): You are not eligible to receive free legal aid.
+A: No
+	Q(26.2): You may qualify for a public defender. If you have SSI or unemployment, these benefits factor in. SNAP does not.
+Q(27): Do you earn more than $77,564.40 USD/year?
+A: Yes
+	Q(27.1): You are not eligible to receive free legal aid.
+A: No
+	Q(27.2): You may qualify for a public defender. If you have SSI or unemployment, these benefits factor in. SNAP does not.
+
