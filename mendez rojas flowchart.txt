@@ -1,0 +1,55 @@
+Title: Mendez Rojas Flowchart
+Author: Emmett Yael
+
+Q(1): Was your client in removal proceedings or did they receive a Notice to Appear(NTA) on or after 06/30/2016?
+A: Yes
+	Q(1.1):Ineligible for class membership
+A: No
+	Q(1.2):GOTO:2
+Q(2): Did your client receive an individual notice, a revised i-862, or a revised NTA after 01/26/2021?
+A: Yes
+	Q(2.1): Ineligible for class membership
+A: No
+	Q(2.2):GOTO:3
+Q(3): Was your client encountered by Department of Homeland Security (DHS) on arrival or within 14 days of unlawful arrival?
+A: Yes
+	Q(3.1):GOTO:4
+A: No
+	Q(3.2): Ineligible for class membership
+Q(4): Did your client express a credible fear of returning to their origin country?
+A: Yes
+	Q(4.1):GOTO:5
+A: No
+	Q(4.2): Ineligible for class membership
+A: What is a credible fear?
+	Q(4.3): THE DEFINITION OF A CREDIBLE FEAR 
+Q(5): Was your client's fear deemed credible by DHS EXAMPLE OF HOW THEY WOULD KNOW?
+A: Yes
+	Q(5.1):GOTO:6 
+A: No
+	Q(5.2):GOTO:7
+Q(6): Was your client given individual notice of the 1-year deadline for filing for asylum?
+A: Yes
+	Q(6.1): Ineligible for class membership
+A: No
+	Q(6.2):GOTO:8
+Q(7): Was your client released from DHS custody and given a NTA?
+A: Yes
+	Q(7.1):GOTO:9
+A: No
+	Q(7.2): Ineligible for class membership
+Q(8): Did your client file for asylum more than one year after arrival or have they not filed yet?
+A: Yes
+	Q(8.1): Your client is eligible for membership in Class A. More information can be found:
+A: No
+	Q(8.2): Ineligible for class membership 
+Q(9): Did your client receive individual notice of the 1-year deadline?
+A: Yes
+	Q(9.1): Ineligible for class membership
+A: No
+	Q(9.2):GOTO:10
+Q(10): Did your client file for asylum more than one year after arrival or have they not filed yet?
+A: Yes
+	Q(10.1): Your client is eligible for membership in Class B. More information can be found: 
+A: No
+	Q(10.2): Ineligible for class membership
