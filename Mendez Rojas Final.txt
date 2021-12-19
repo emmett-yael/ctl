@@ -1,0 +1,98 @@
+Title: Mendez Rojas Flowchart
+Author: Emmett Yael
+
+Before: <h2 style="text-align:center;">Mendez Rojas "Flowchart"</h2>
+<p><b>This is a student project. You should use this as a guide and not rely on it as a source of legal information!</b></p>
+
+<p>To read a published legal guide about the Mendez Rojas ruling, click the following link from The American Immigration Council, Dobrin & Han, PC Attorneys at law, and the Northwest Immigration Rights Project: https://www.americanimmigrationcouncil.org/sites/default/files/mendez_rojas_v_johnson_faq.pdf</p> 
+</br>
+This flowchart is intended to guide those helping asylum seekers determine if the asylum seeker is a member of the Mendez Rojas class, which would give them a legal recourse for missing the one-year deadline for application by asylum seekers. </p>
+
+<p>To read the Mendez Rojas case, go to: https://nwirp.org/uploads/2020/08/Mendez-Rojas-Corrected-Settlement-Agreement.pdf</p>
+
+Q(1): Was your client in removal proceedings or did they receive a Notice to Appear(NTA) on or after 06/30/2016?
+A: Yes
+	Q(1.1):GOTO:2
+A: No
+	Q(1.2): Ineligible for class membership
+Q(2): Did your client receive an individual notice, a revised i-862 also known a NTA after 01/26/2021?
+A: Yes
+	Q(2.1): Ineligible for class membership
+A: No
+	Q(2.2):GOTO:3
+Q(3): Was your client encountered by Department of Homeland Security (DHS) on arrival or within 14 days of unlawful arrival?
+A: Yes
+	Q(3.1):GOTO:4
+A: No
+	Q(3.2): Ineligible for class membership
+Q(4): Did your client express a credible fear of returning to their origin country?
+A: Yes
+	Q(4.1):GOTO:5
+A: No
+	Q(4.2): Ineligible for class membership
+Q(5): Was your client's fear deemed credible by DHS? (Your client would be in removal proceedings if their credible fear claim had not been believed.)
+A: Yes
+	Q(5.1):GOTO:6 
+A: No
+	Q(5.2):GOTO:7
+Q(6): Was your client given individual notice of the 1-year deadline for filing for asylum?
+A: Yes
+	Q(6.1): Ineligible for class membership
+A: No
+	Q(6.2):GOTO:8
+A: What qualifies as individual notice?
+	Q(6.3): For purposes of the class definitions, only notice provided by an employee of DHS and the Executive
+Office for Immigration Review (EOIR) constitutes individualized notice. Notice provided by a third party, including “Legal Orientation Program” (LOP) presentations provided by subcontractors to EOIR, does not
+constitute individualized notice. 
+Q(7): Was your client released from DHS custody and given a NTA?
+A: Yes
+	Q(7.1):GOTO:9
+A: No
+	Q(7.2): Ineligible for class membership
+Q(8): Did your client file for asylum more than one year after arrival or have they not filed yet?
+A: Yes
+	Q(8.1): Your client is eligible for membership in Class A. More information can be found by going back one and clicking Class A Membership
+A: No
+	Q(8.2): Ineligible for class membership 
+A: Class A Membership
+	Q(8.3):GOTO:12
+Q(9): Did your client receive individual notice of the 1-year deadline?
+A: Yes
+	Q(9.1): Ineligible for class membership
+A: No
+	Q(9.2):GOTO:10
+Q(10): Did your client file for asylum more than one year after arrival or have they not filed yet?
+A: Yes
+	Q(10.1): Your client is eligible for membership in Class B. More information can be found by going back one and clicking Class B Membership
+A: No
+	Q(10.2): Ineligible for class membership
+A: Class B Membership
+	Q(10.3):GOTO:11
+Q(11): You are a member of Class B if:
+o You were detained by DHS either (i) when you came to the United States; or (ii)
+within fourteen days of entering the United States without permission;
+o You told an immigration officer you were afraid to return to your country of origin
+and then DHS released you from detention and gave you a Notice to Appear (NTA)
+2
+before an immigration judge in removal proceedings (Form I-862);
+o The government did not notify you that your asylum application had to be filed within
+one year of your arrival to the United States; and
+o You are applying, or you applied, for asylum more than one year after the last time
+you arrived in the United States.
+• Subclasses:
+o You are a member of Subclass B.I if you are not in removal proceedings.
+o You are a member of Subclass B.II if you are in removal proceedings
+Q(12): Class A membership
+A: You are a member of Class A if:
+o You were detained by DHS either (i) when you came to the United States; or (ii)
+within fourteen days of entering the United States without permission;
+o You received a screening interview with an asylum officer (a credible fear interview)
+and DHS released you after the interview because the asylum officer found that you
+had a credible fear of persecution or torture;
+o The government did not notify you that your asylum application had to be filed within
+one year of your arrival to the United States; and
+o You are applying, or you applied, for asylum more than one year after the last time
+you arrived in the United States.
+• Subclasses:
+o You are a member of Subclass A.I if you are not in removal proceedings.
+o You are a member of Subclass A.II if you are in removal proceedings.
